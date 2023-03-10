@@ -1,0 +1,9 @@
+[general]
+name=AATG Vermessung
+description=Helper tools for survey
+about=Export the selected LFP's or geometries to a csv
+version=1.0
+qgisMinimumVersion=3.0
+author=Andreas Wyss
+email=andreas.wyss@tg.ch
+repository=URL to the code repository
