@@ -1,7 +1,7 @@
 from typing import List
 
 import qgis.utils
-from qgis.core import QgsMapLayer, QgsFeature, QgsVectorLayer, QgsProject, QgsRasterLayer, QgsLayerDefinition
+from qgis.core import QgsMapLayer, QgsFeature, QgsProject, QgsRasterLayer, QgsLayerDefinition
 
 
 def get_selected_layer():

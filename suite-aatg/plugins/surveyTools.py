@@ -2,9 +2,8 @@ import math
 import os
 
 from PyQt5.QtWidgets import QAction, QMessageBox
-from qgis.PyQt.QtGui import QIcon
-
 from aa_utils import file_utils, map_utils
+from qgis.PyQt.QtGui import QIcon
 
 
 class SurveyTools:
