@@ -1,0 +1,2 @@
+"C:\Program Files\QGIS 3.22.4\apps\Python39\python.exe" -m pip install --upgrade pip
+"C:\Program Files\QGIS 3.22.4\apps\Python39\python.exe" -m pip install wheel

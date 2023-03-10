@@ -1,0 +1,29 @@
+git config --global user.name %1
+git config --global user.email %2
+git config --global credential.helper wincred
+git config --global http.sslBackend schannel
+git config --global http.schannelcheckRevoke true
+git config --global http.sslverify false
+
+
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Users/aawys/AppData/Local/Programs/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=a-wyss
+user.email=andreas.wyss@tg.ch
+credential.helper=wincred
+http.sslbackend=schannel
+http.schannelcheckrevoke=true
+http.sslverify=false
