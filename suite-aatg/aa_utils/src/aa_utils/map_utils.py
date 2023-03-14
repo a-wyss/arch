@@ -72,6 +72,6 @@ def get_raster_layer_sources(layers):
 Action code (use in layer properties)
 -------------------------------------
 - load raster from source (RasterPfad is the field name where the absolute path is stored):
-qgis.utils.iface.addRasterLayer('[% "RasterPfad" %]', os.path.basename(os.path.splitext('[% "RasterPfad" %]')[0]))
+qgis.utils.iface.addRasterLayer(r'[% "RasterPfad" %]', os.path.basename(os.path.splitext('[% "RasterPfad" %]')[0]))
 
 """
