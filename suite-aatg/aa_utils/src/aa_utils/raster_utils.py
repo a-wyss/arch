@@ -1,4 +1,5 @@
 from osgeo import gdal
+from aa_utils.constants import RasterBandDataType
 
 
 class Raster(object):
@@ -6,6 +7,8 @@ class Raster(object):
         self.__file = in_file
         print(f"Reading {self.__file}")
         self.raster = gdal.Open(self.__file)
+
+        self.__bands = {}
 
     @property
     def is_valid(self):
@@ -42,3 +45,28 @@ class Raster(object):
     @property
     def band_count(self):
         return self.raster.RasterCount
+
+    def get_band(self, band_idx=1):
+        if band_idx not in self.__bands.keys():
+            band = RasterBand(self.raster.GetRasterBand(band_idx))
+            self.__bands.update({band_idx: band})
+
+        return self.__bands[band_idx]
+
+
+class RasterBand(object):
+    def __init__(self, band):
+        self.__band = band
+        self.__band.GetStatistics(1, 1)
+
+    @property
+    def max(self):
+        return self.__band.GetMaximum()
+
+    @property
+    def min(self):
+        return self.__band.GetMinimum()
+    
+    @property
+    def data_type(self):
+        return RasterBandDataType(self.__band.DataType).name
